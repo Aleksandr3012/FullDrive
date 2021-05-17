@@ -1,0 +1,62 @@
+// start .sQuestions
+.sQuestions {
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
+
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sQuestions
+
+.accardion {
+	margin-bottom: rem(2);
+	background-color: #71747a;
+	&__head {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: rem(25) rem(30);
+		cursor: pointer;
+		font-weight: 600;
+
+		&:hover {
+			.accardion__iconWrap {
+				background-color: $primary;
+			}
+
+			.icon {
+				transform: rotate(-45deg);
+			}
+		}
+	}
+	&.active {
+		.icon {
+			transform: rotate(-45deg);
+		}
+	}
+
+	&__iconWrap {
+		flex-shrink: 0;
+		border-radius: 50%;
+		width: rem(40);
+		height: rem(40);
+		display: grid;
+		place-items: center;
+		@include mt;
+	}
+	.icon {
+		@include mt;
+	}
+	&__content {
+		padding: rem(0) rem(30) rem(30);
+		display: none;
+		font-size: rem(16);
+		@extend .mono;
+	}
+}

@@ -1,0 +1,30 @@
+mixin sSteps(data)
+	// start sSteps
+	+b.SECTION.sSteps.section#sSteps&attributes(attributes)
+		.container
+			+b.section-title
+				+e.steps 7 ШАГОВ
+				h2 ДО ПОЛУЧЕНИЯ ПРАВ
+
+			+e.row.row
+				mixin item(i,title,text,img)
+					+e.col.col-md-6
+						+e.num= i
+						if img 
+							+e.imgWrap--pulse
+								+pic('certificate','','')
+						else 
+							+e.imgWrap
+								img(src=`img/svg/step-${i}`, alt="" loading="lazy")
+						+e.itemTitle!= title 
+						p!= text
+				+item('1',`<strong class="text-primary d-block">Подайте документы</strong> и оплатите обучение`,`Оплата целиком или в рассрочку под 0%. И больше никаких дополнительных платежей`)
+				+item('2',`<strong class="text-primary">Скачайте</strong> мобильное приложение`,`Удобный формат уроков позволяет получать информацию когда и где удобно`)
+				+item('3',`Изучите теорию и <strong class="text-primary">сдайте зачет</strong> по ПДД`,`Уроки в удобном формате понятно расскажут о правилах дорожного движения. В конце обучения у вас будут все необходимые знания, чтобы успешно сдать экзамен в ГИБДД`)
+				+item('4',`<strong class="text-primary d-block">Приступите</strong> к вождению`,`Выберите инструктора, машину и площадку`)
+				+item('5',`Сдайте внутренний экзамен</strong> автошколы`,`Чтобы убедиться в готовности к экзамену в ГИБДД`)
+				+item('6',`<strong class="text-primary d-block">Сдайте экзамен</strong> в ГИБДД`,`Экзамен будете сдавать на том же автомобиле, на котором учились`)
+				+item('7',`<strong class="text-primary">Получите водительское</strong> удостоверение`,`И законно управляйте автомобилем или мотоциклом`,'img')
+				+e.background-text 7 ШАГОВ
+
+	// end sSteps

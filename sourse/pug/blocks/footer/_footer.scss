@@ -1,0 +1,43 @@
+.footer {
+	margin-top: auto;
+	padding-top: var(--sPT);
+	padding-bottom: rem(30);
+
+	&__txt {
+		color: #999 !important;
+		text-decoration: none;
+		font-size: 14px;
+		line-height: 1.55;
+	}
+	&__logo {
+		display: inline-block;
+
+		img {
+			max-width: 103px;
+		}
+	}
+	&__version {
+		display: inline-block;
+		img {
+			width: 100px;
+		}
+	}
+	.row {
+		@include media-breakpoint-up(xl) {
+			@include roww(136px);
+		}
+	}
+
+	&__rBlock {
+		text-align: right;
+	}
+
+	@include media-breakpoint-up(xs) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xs) {
+	}
+}

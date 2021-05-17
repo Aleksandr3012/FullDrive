@@ -1,0 +1,103 @@
+mixin sPrice(data)
+	// start sPrice
+	+b.sPrice.section#sPrice&attributes(attributes)
+		.container
+			.tabs.tabs--js
+				.tabs__caption
+					.tabs__btn.active АВТОШКОЛА
+					.tabs__btn МОТОШКОЛА
+				.tabs__wrap
+					.tabs__content.active 
+						+e.row.row
+							.col-lg-6
+								+e.item
+									h3.text-primary ЭКСПРЕСС
+									+priceItem({
+										courseTime: '1,5 месяца',
+										type: 'МИНИ',
+										driving: 'Вождение МКПП/АКПП',
+										mob: 'В моб. приложении',
+										time: '13/15 часов',
+										price: '15 900 ₽'
+									})
+									+priceItem({
+										courseTime: '1,5 месяца',
+										type: 'МАКСИ',
+										driving: 'Вождение МКПП/АКПП',
+										mob: 'В моб. приложении',
+										time: '26/28 часов',
+										price: '22 900 ₽'
+									})
+							.col-lg-6
+								+e.item
+									h3.text-primary СТАНДАРТ
+									+priceItem({
+										courseTime: '2,5 месяца',
+										type: 'МИНИ',
+										driving: 'Вождение МКПП/АКПП',
+										mob: 'В моб. приложении',
+										time: '26/28 часов',
+										price: '21 900 ₽'
+									})
+									+priceItem({
+										courseTime: '3 месяца',
+										type: 'МАКСИ',
+										driving: 'Вождение МКПП/АКПП',
+										mob: 'В моб. приложении',
+										time: '34/36 часов',
+										price: '32 900 ₽'
+									})
+					.tabs__content
+						+e.item--lg
+							.row
+								.col-lg-6
+									+priceItem({
+										courseTime: '1,5 месяца',
+										type: 'МИНИ',
+										driving: 'Вождение МКПП/АКПП',
+										mob: 'В моб. приложении',
+										time: '4 часа',
+										price: '14 900 ₽'
+									}).moto
+								.col-lg-6 
+									+priceItem({
+										courseTime: '1,5 месяца',
+										type: 'МАКСИ',
+										driving: 'Вождение МКПП/АКПП',
+										mob: 'В моб. приложении',
+										time: '4 часа',
+										price: '18 900 ₽'
+									}).moto
+						+e.advantages
+							.row 
+								mixin col(t)
+									+e.col.col-md-4 
+										+e.check 
+											+pic('check.png','','')
+										+e.text= t
+								+col('Крытые полигоны')
+								+col('Круглогодичное обучение')
+								+col('Экипировка бесплатно')
+
+
+
+	// end sPrice
+
+mixin priceItem(item)
+	+b.priceItem&attributes(attributes)
+		+e.courseTime= item.courseTime
+		+e.type= item.type
+		table 
+			thead 
+				tr 
+					td Теория
+					td= item.driving
+			tbody 
+				tr 
+					td= item.mob
+					td= item.time
+				tr 
+					td
+						+e.price= item.price
+					td 
+						+e.btn.link-modal-js(href="#modal") ЗАПИСАТЬСЯ

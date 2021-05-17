@@ -1,0 +1,54 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sQuestions/_sQuestions.pug
+include ../blocks/sTimer/_sTimer.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sOffers/_sOffers.pug
+include ../blocks/sPrice/_sPrice.pug
+include ../blocks/sSteps/_sSteps.pug
+include ../blocks/sRequirements/_sRequirements.pug
+include ../blocks/sInstructors/_sInstructors.pug
+include ../blocks/sOnline/_sOnline.pug
+include ../blocks/sCarPark/_sCarPark.pug
+include ../blocks/sCertificate/_sCertificate.pug
+include ../blocks/sToHome/_sToHome.pug
+include ../blocks/sMotorcycles/_sMotorcycles.pug
+include ../blocks/sMap/_sMap.pug
+include ../blocks/sAttachment/_sAttachment.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= 'Фулл драйв'
+	title= title
+block pagecontent
+
+	+header()
+		+top-nav()
+	+headerBlock()
+	+sAbout()
+	+sOffers()
+	+sPrice()
+	+sSteps()
+	+sRequirements()
+	+sInstructors()
+	+sOnline()
+	+sCarPark()
+	+sCertificate()
+	+sToHome()
+	+sMotorcycles()
+	+sMap()
+	+sAttachment()
+	+sTimer()
+	+sQuestions()
+	+sContact()
+	+footer()
+
+
+
+

@@ -1,0 +1,19 @@
+mixin sContact()
+	// start sContact
+	+b.SECTION.sContact.section#sContact&attributes(attributes)
+		.container
+			+b.section-title
+				h2 КОНТАКТЫ
+
+			.row
+				.col 
+					+e.title Телефон
+					+e.subtitle(href="tel:8(812)9856005") 8 (812) 985-60-05
+					+e.link.link-moldal-js(href="#modal-call") Обратный звонок
+				.col 
+					+e.title Режим работы
+					+e.subtitle пн-вс 09.00-20.00
+				.col 
+					+e.title Электронная почта
+					+e.subtitle(href="mailto:fulldrives@yandex.ru") fulldrives@yandex.ru
+	// end sContact

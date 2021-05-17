@@ -1,0 +1,41 @@
+mixin mob-mnu()
+	+b.menu-mobile--js.d-lg-none
+		+b.toggle-menu-mobile--js.on
+			span
+		+e.inner
+			+mnu()
+			.text-right
+	//  мобильное меню
+
+mixin top-nav() 
+	// start top-nav
+	+b.top-nav.block-with-lazy
+		.container
+			+e.row.row.align-items-center.gy-3
+				.col
+					+e.logo(href='/')
+						img(loading="lazy" src="img/svg/logo.svg" alt="")
+				.col-auto.d-lg-none
+					+e.number.d-block.mb-2(href="tel:88129856005") 8 (812) 985-60-05
+					+e.sub-row.row.justify-content-end.justify-content-sm-start
+						.col-auto
+							+e.soc(href="#")
+								img(loading="lazy" src='img/@2x/wa.png' alt="")
+						.col-auto
+							+e.soc(href="#")
+								img(loading="lazy" src='img/@2x/tg.png' alt="")
+				.col-auto.d-none.d-lg-block
+					+e.gray Мы онлайн
+					+e.sub-row.row
+						.col-auto
+							+e.soc(href="#")
+								img(loading="lazy" src='img/@2x/wa.png' alt="")
+						.col-auto
+							+e.soc(href="#")
+								img(loading="lazy" src='img/@2x/tg.png' alt="")
+				.col-auto.d-none.d-lg-block
+					+e.gray Бесплатная консультация
+					+e.number(href="tel:88129856005") 8 (812) 985-60-05
+				.col-auto.d-none.d-sm-block
+					+e.callback-btn(href="#") Заказать звонок
+	// end top-nav

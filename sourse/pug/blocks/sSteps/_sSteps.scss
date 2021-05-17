@@ -1,0 +1,39 @@
+// start .sSteps
+.sSteps {
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
+
+	.section-title {
+		&__steps {
+		}
+	}
+
+	h2 {
+		margin-bottom: 0;
+	}
+
+	&__row {
+	}
+	&__col {
+	}
+	&__num {
+	}
+	&__imgWrap {
+		&--pulse {
+		}
+	}
+	&__itemTitle {
+	}
+	p {
+	}
+
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sSteps

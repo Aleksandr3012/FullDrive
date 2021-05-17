@@ -1,0 +1,27 @@
+mixin headerBlock()
+	// start headerBlock
+	+b.headerBlock.section#headerBlock&attributes(attributes)
+		+e.ball-cont
+			+e.ball
+				+pic('headerBl-img.png', undefined, 0)(class="headerBlock__car-img")
+				+e.ball-txt «Тестовый слоган компании среднего размера»
+				+e.ball-circle--1
+				+e.ball-circle--2
+				+e.ball-circle--3
+		.container
+			+e.row.row
+				.col-lg-7
+					+b.section-title
+						h1
+							| ОНЛАЙН ОБУЧЕНИЕ
+							br
+							| на права категории А и В
+						ul
+							li Экономия времени и денег на дорогу
+							li Не ждете, когда наберется группа, чтобы начать обучение
+							li Получаете индивидуальную обратную связь
+							li Осваиваете материал в комфортном темпе
+							li Удобный формат уроков в вашем смартфоне
+							li Вождение на оборудованной площадке рядом с вашим домом
+						+e.btn(href='#') ЗАПИСАТЬСЯ В ШКОЛУ
+	// end headerBlock

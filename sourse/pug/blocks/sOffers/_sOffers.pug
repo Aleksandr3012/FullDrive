@@ -1,0 +1,47 @@
+mixin sOffers(data)
+	// start sOffers
+	+b.SECTION.sOffers.section#sOffers&attributes(attributes)
+		.container
+			+b.section-title
+				h2 СПЕЦИАЛЬНЫЕ ПРЕДЛОЖЕНИЯ
+				+e.subtitle *Скидки не суммируются
+
+			+e.row
+				mixin item(item)
+					+e.col
+						+e.imgWrap 
+							img.res-i(src=`img/svg/offer-${item.img}.svg`, alt="")
+
+						+e.title!= item.title
+						+e.subtitle!= item.subtitle
+				+item({
+					img: `1`,
+					title: `Оплата курсов <strong class="text-primary">в&nbsp;рассрочку под&nbsp;0%</strong>`,
+					subtitle: `Обучайтесь сейчас, а платите потом без надбавок`
+				})
+				+item({
+					img: `2`,
+					title: `Для зачисления на курсы достаточно <strong class="text-primary">5000 ₽</strong>`,
+					subtitle: `Чтобы начать учебу, вам достаточно внести первый взнос`
+				})
+				+item({
+					img: `3`,
+					title: `<strong class="text-primary d-block">Скидка студентам</strong> 1000 ₽`,
+					subtitle: `При предъявлении студенческого билета`
+				})
+				+item({
+					img: `4`,
+					title: `<strong class="text-primary">Получите 1500 ₽</strong> за&nbsp;приведенного друга`,
+					subtitle: `Привести можно неограниченное число друзей`
+				})
+				+item({
+					img: `5`,
+					title: `<strong class="text-primary d-block">Скидка 1000 ₽</strong> за знание теории`,
+					subtitle: `Уже знаете ПДД? Сдайте тест и сразу приступайте к практике`
+				})
+				+item({
+					img: `6`,
+					title: `<strong class="text-primary">Скидка 500 ₽</strong> при записи на обучение онлайн`,
+					subtitle: `Оставьте заявку на выбранный курс на сайте и получите скидку`
+				})
+	// end sOffers

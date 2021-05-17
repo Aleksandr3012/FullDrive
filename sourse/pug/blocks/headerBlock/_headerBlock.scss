@@ -1,0 +1,222 @@
+// start .headerBlock
+.headerBlock {
+	margin-bottom: 1px;
+	overflow: hidden;
+	padding-top: calc(var(--header-height, 100px) + var(--sPT));
+
+	padding-bottom: calc(var(--ballH) * 10 / 10);
+	@include media-breakpoint-up(sm) {
+		padding-bottom: calc(var(--ballH) * 9.2 / 10);
+	}
+	@include media-breakpoint-up(md) {
+		padding-bottom: calc(var(--ballH) * 9 / 10);
+	}
+	@include media-breakpoint-up(lg) {
+		min-height: #{"max(100vh, #{rem(800)})"};
+		padding-bottom: var(--sPB);
+	}
+
+	--ballH: #{320px};
+	@include media-breakpoint-up(sm) {
+		--ballH: #{rem(620)};
+	}
+	@include media-breakpoint-up(md) {
+		--ballH: #{rem(620)};
+	}
+	@include media-breakpoint-up(xl) {
+		--ballH: #{rem(700)};
+	}
+	@include media-breakpoint-up(xxl) {
+		--ballH: #{rem(820)};
+	}
+
+	&__row {
+	}
+
+	position: relative;
+	z-index: 1;
+	&__ball-cont {
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	&__ball {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+
+		transform: translateX(-3%) translateY(25%);
+		@include media-breakpoint-up(sm) {
+			transform: translateX(-3%) translateY(25%);
+		}
+		@include media-breakpoint-up(xl) {
+			transform: translateX(-5%) translateY(25%);
+		}
+		@include media-breakpoint-up(xxl) {
+			transform: translateX(-5%) translateY(25%);
+		}
+		width: var(--ballH);
+		height: var(--ballH);
+		@include media-breakpoint-up(base) {
+			transform: translateX(-20%) translateY(25%);
+		}
+
+		border-radius: 50%;
+		background-color: $green;
+		box-shadow: 0px 0px 231px 0px rgba(110, 182, 60, 0.4);
+	}
+	&__ball-circle {
+		position: absolute;
+		z-index: -2;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		border-radius: 50%;
+
+		border: var(--border-width, #{rem(100)}) solid rgba($white, 0.05);
+
+		--border-width: #{rem(60)};
+		@include media-breakpoint-up(md) {
+			--border-width: #{rem(60)};
+		}
+		@include media-breakpoint-up(lg) {
+			--border-width: #{rem(70)};
+		}
+		@include media-breakpoint-up(xl) {
+			--border-width: #{rem(100)};
+		}
+
+		&--1 {
+			width: calc(100% + var(--border-width, #{rem(100)}) * 4);
+			height: calc(100% + var(--border-width, #{rem(100)}) * 4);
+		}
+		&--2 {
+			width: calc(100% + var(--border-width, #{rem(100)}) * 8);
+			height: calc(100% + var(--border-width, #{rem(100)}) * 8);
+		}
+		&--3 {
+			width: calc(100% + var(--border-width, #{rem(100)}) * 12);
+			height: calc(100% + var(--border-width, #{rem(100)}) * 12);
+		}
+	}
+
+	&__car-img {
+		position: absolute;
+		top: rem(-50);
+		@include media-breakpoint-up(sm) {
+			top: rem(-100);
+		}
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+
+		img {
+			width: auto;
+			height: auto;
+
+			max-width: 80%;
+			max-height: 80%;
+			@include media-breakpoint-up(sm) {
+				max-width: 90%;
+				max-height: 90%;
+			}
+		}
+	}
+	&__ball-txt {
+		position: absolute;
+
+		bottom: rem(120);
+		font-size: rem(16);
+		@include media-breakpoint-up(sm) {
+			bottom: rem(180);
+			font-size: rem(19);
+		}
+		@include media-breakpoint-up(xl) {
+			bottom: rem(195);
+		}
+		@include media-breakpoint-up(xxl) {
+			bottom: rem(230);
+		}
+		left: 0;
+		width: 100%;
+		text-align: center;
+
+		font-weight: 500;
+	}
+
+	.section-title {
+		h1 {
+			margin-bottom: rem(40);
+
+			font-size: rem(30);
+			letter-spacing: rem(0.5);
+			@include media-breakpoint-up(sm) {
+				font-size: rem(40);
+				letter-spacing: rem(1);
+			}
+			@include media-breakpoint-up(xl) {
+				font-size: rem(54);
+			}
+		}
+		ul {
+			list-style: none;
+			margin: 0 0 rem(45);
+
+			li {
+				display: flex;
+				align-items: flex-start;
+
+				margin-bottom: rem(30);
+				@include media-breakpoint-up(sm) {
+					margin-bottom: rem(35);
+				}
+
+				font-size: rem(19);
+				line-height: rem(20);
+				font-weight: 300;
+
+				&:before {
+					content: "";
+					flex-shrink: 0;
+					display: inline-block;
+					width: rem(20);
+					height: rem(20);
+					margin-right: rem(12);
+					border-radius: 50%;
+					border: 4px solid $white;
+					background-color: $green;
+				}
+			}
+		}
+		&__btn {
+			@extend .btn-primary;
+			@extend .btn;
+
+			min-width: rem(350);
+			padding: rem(25) rem(35);
+			@include media-breakpoint-up(lg) {
+				min-width: rem(380);
+				padding: rem(30) rem(40);
+			}
+			@include media-breakpoint-up(xl) {
+				min-width: rem(420);
+				padding: rem(35) rem(50);
+			}
+		}
+	}
+	&__ {
+	}
+	&__ {
+	}
+	&__ {
+	}
+}
+
+// end.headerBlock
