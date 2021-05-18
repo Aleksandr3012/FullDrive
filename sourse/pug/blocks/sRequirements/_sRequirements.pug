@@ -2,8 +2,50 @@ mixin sRequirements(data)
 	// start sRequirements
 	+b.SECTION.sRequirements.section#sRequirements&attributes(attributes)
 		.container
-			+b.section-title
-				h2 sRequirements
-				
-			.row
+			+e.row.row
+				.col-xl-9
+					+e.block 
+						+e.blockInner
+							+b.section-title
+								h3 #[span.text-primary Для зачисления в школу] Full Drive необходимо:
+							+e.roww.row 
+								mixin col(i,t)
+									+e.col.col-6.col-md-3 
+										+e.imgWrap(class=`sRequirements__imgWrap--${i}`)
+											+pic(`requirments-${i}.png`,'','')
+										+e.txt!= t
+								+col('1',`Паспорт гражданина РФ`)
+								+col('2',`Две фотографии 3x4`)
+								+col('3',`Медицинская справка`)
+								+col('4',`Оплата целиком или в рассрочку`)
+						+e.whiteBlock 
+							+e.medicalCertificate
+								+pic('requirments-3.png','','')
+							+e.whiteBlockInner
+								h3 Нет медицинской справки?
+								h5 Мы поможем вам с ее оформлением3
+								+e.btn.link-modal-js(href="#modal-signUp") ЗАПИСАТЬСЯ В АВТОШКОЛУ
+				.col-xl
+					.row 
+						.col.col-lg-12
+							+e.checkItem 
+								+e.checkImg
+									+pic('check-green.png','','')
+								+e.textWrap 
+									h4 #[span.text-primary Не нужно ждать] набора группы
+									p Начинайте учиться сразу&nbsp;же в&nbsp;день записи или оплаты
+						.col.col-lg-12
+							+e.checkItem 
+								+e.checkImg
+									+pic('check-green.png','','')
+								+e.textWrap 
+									h4 Экзамен в ГИБДД #[span.text-primary с&nbsp;комфортом]
+									p Полное сопровождение вплоть до&nbsp;получения водительских прав
+						.col.col-lg-12
+							+e.checkItem 
+								+e.checkImg
+									+pic('check-green.png','','')
+								+e.textWrap 
+									h4 #[span.text-primary Заботимся] о каждом ученике
+									p Персональный менеджер на связи 24/7
 	// end sRequirements

@@ -20,7 +20,7 @@ $file-format: woff2;
 @include font-face(
 	$default-font,
 	$addr + "FuturaPT/FuturaPT-Light",
-	300,
+	100,
 	$file-formats: $file-format
 );
 @include font-face(

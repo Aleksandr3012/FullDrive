@@ -1,12 +1,122 @@
 // start .sRequirements
 .sRequirements {
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
 
+	&__btn {
+		@extend .btn;
+		@extend .btn-primary;
+	}
 
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+	.section-title {
+		.text-primary {
+			font-weight: bold;
+		}
+	}
+
+	&__whiteBlock {
+		position: relative;
+		background-color: #fff;
+		border: solid 2px $primary;
+		border-radius: 10px;
+		padding: rem(55) rem(20) rem(40) rem(300);
+		color: #000000;
+	}
+
+	&__whiteBlockInner {
+		position: relative;
+		z-index: 2;
+	}
+
+	&__block {
+		border: 2px solid rgba($color: #fff, $alpha: 0.2);
+		border-radius: 5px;
+	}
+
+	&__blockInner {
+		padding: rem(40) rem(81) rem(50) rem(30);
+	}
+
+	&__medicalCertificate {
+		position: absolute;
+		// z-index: -1;
+		left: -50px;
+		top: -50px;
+
+		img {
+			max-width: rem(370);
+		}
+	}
+	&__checkItem {
+		display: flex;
+		padding-top: rem(60);
+	}
+	&__checkImg {
+		max-width: rem(50);
+		margin-right: rem(10);
+		flex-shrink: 0;
+	}
+	&__textWrap {
+	}
+	&__col {
+	}
+	&__imgWrap {
+		position: relative;
+		@include block(100, 100);
+		background-image: url("../img/svg/requirements-bg.svg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		border-radius: 50%;
+		max-width: 100px;
+		margin-bottom: rem(20);
+
+		img {
+			@include a-cent;
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+
+		&--1 img {
+			max-width: 85px;
+		}
+
+		&--2 {
+			img {
+				max-width: 70px;
+			}
+		}
+		&--3 img {
+			max-width: 90px;
+		}
+	}
+	&__roww {
+		@include media-breakpoint-up(xl) {
+			@include roww(84px);
+		}
+	}
+	&__txt {
+		font-size: rem(18);
+	}
+	&__row {
+		@include media-breakpoint-up(xl) {
+			@include roww(45px);
+		}
+	}
+	&__ {
+	}
+	&__ {
+	}
+	&__ {
+	}
+
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
 } // end.sRequirements

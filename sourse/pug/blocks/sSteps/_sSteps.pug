@@ -8,16 +8,17 @@ mixin sSteps(data)
 
 			+e.row.row
 				mixin item(i,title,text,img)
-					+e.col.col-md-6
-						+e.num= i
+					+e.col.col-md-6(class=`sSteps__col--${i}`)
+						+e.num(class=`sSteps__num--${i}`)= i
 						if img 
 							+e.imgWrap--pulse
 								+pic('certificate','','')
 						else 
 							+e.imgWrap
-								img(src=`img/svg/step-${i}`, alt="" loading="lazy")
-						+e.itemTitle!= title 
-						p!= text
+								img.res-i(src=`img/svg/step-${i}.svg`, alt="" loading="lazy")
+						div
+							+e.itemTitle!= title 
+							p!= text
 				+item('1',`<strong class="text-primary d-block">Подайте документы</strong> и оплатите обучение`,`Оплата целиком или в рассрочку под 0%. И больше никаких дополнительных платежей`)
 				+item('2',`<strong class="text-primary">Скачайте</strong> мобильное приложение`,`Удобный формат уроков позволяет получать информацию когда и где удобно`)
 				+item('3',`Изучите теорию и <strong class="text-primary">сдайте зачет</strong> по ПДД`,`Уроки в удобном формате понятно расскажут о правилах дорожного движения. В конце обучения у вас будут все необходимые знания, чтобы успешно сдать экзамен в ГИБДД`)

@@ -2,8 +2,47 @@ mixin sInstructors(data)
 	// start sInstructors
 	+b.SECTION.sInstructors.section#sInstructors&attributes(attributes)
 		.container
-			+b.section-title
-				h2 sInstructors
-				
+			.row 
+				.col-7
+					+b.section-title
+						h2 ПРОФЕССИОНАЛЬНЫЕ И ВЕЖЛИВЫЕ ИНСТРУКТОРЫ
+				.col 
+					.row 
+						mixin check(t)
+							.col
+								.row 
+									.col-xl-12
+										+e.check 
+											+pic('check-green.png','','')
+									.col 
+										h6!= t
+						+check(`Приятные в&nbsp;общении доброжелательные люди`)
+						+check(`Мастера вождения с&nbsp;большим опытом`)
+						+check(`Индивидуальный подход к&nbsp;каждому ученику`)
 			.row
+				mixin instructor(item)
+					+e.col.col-md-6.col-lg-4
+						+e.item 
+							+e.imgWrap 
+								+pic(`instructor-${item.img}.jpg`)
+							+e.name Иван 
+								span.text-primary= item.name 
+
+				+instructor({
+					img: '1',
+					name: `Иванов`,
+				})
+				+instructor({
+					img: '2',
+					name: `Никифоров`,
+				})
+				+instructor({
+					img: '3',
+					name: `Петров`,
+				})
+				+instructor({
+					img: '4',
+					name: `Иванов`,
+				})
+
 	// end sInstructors

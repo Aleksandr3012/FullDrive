@@ -1,12 +1,46 @@
 // start .sInstructors
 .sInstructors {
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
 
+	&__check {
+		margin-bottom: rem(10);
+		img {
+			max-width: rem(36);
+		}
+	}
+	&__ {
+	}
+	&__ {
+	}
+	&__ {
+	}
+	&__ {
+	}
+	&__ {
+	}
+	&__ {
+	}
+	&__ {
+	}
+	&__ {
+	}
+	&__ {
+	}
+	&__ {
+	}
+	&__ {
+	}
+	&__ {
+	}
 
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
 } // end.sInstructors
