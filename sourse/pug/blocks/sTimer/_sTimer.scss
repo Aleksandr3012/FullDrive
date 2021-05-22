@@ -48,8 +48,20 @@
 
 .tmr_el_val {
 	color: $primary;
-	@include rfs(75px);
 	line-height: 1;
+	text-align: center;
+	min-width: 35px;
+	@include rfs(70px);
+	@include media-breakpoint-up(sm) {
+		@include rfs(75px);
+		min-width: 80px;
+	}
+	@include media-breakpoint-up(md) {
+		min-width: 90px;
+	}
+	@include media-breakpoint-up(xl) {
+		min-width: 100px;
+	}
 }
 .tmr_el_unit {
 	text-align: center;
@@ -80,7 +92,10 @@
 			color: $primary;
 			position: absolute;
 			right: -10px;
-			top: -20px;
+			top: -10px;
+			@include media-breakpoint-up(sm) {
+				top: -20px;
+			}
 		}
 	}
 }
