@@ -74,6 +74,7 @@
 
 @keyframes car {
 	0% {
+		opacity: 1;
 		transform: translateX(0px) translateY(0px);
 	}
 	10% {
@@ -92,9 +93,15 @@
 		transform: translateX(310px) translateY(65px);
 	}
 	70% {
+		opacity: 1;
+		transform: translateX(20px) translateY(180px);
+	}
+	99% {
+		opacity: 0;
 		transform: translateX(20px) translateY(180px);
 	}
 	100% {
+		opacity: 0;
 		transform: translateX(20px) translateY(180px);
 	}
 }
@@ -126,8 +133,14 @@
 		opacity: 1;
 		transform: translateY(0px);
 	}
-	100% {
+	90% {
 		opacity: 1;
+	}
+	99% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
 		transform: translateY(0px);
 	}
 }

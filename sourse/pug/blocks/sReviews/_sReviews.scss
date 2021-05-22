@@ -23,6 +23,29 @@
 		// height: auto;
 	}
 
+	&__video {
+		position: relative;
+
+		&::before {
+			content: "";
+			background-image: url("../img/svg/youtube.svg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			width: 40px;
+			height: 32px;
+			position: absolute;
+			@include a-cent;
+			opacity: 0.8;
+			@include mt;
+		}
+
+		&:hover {
+			&::before {
+				transform: scale(1.1);
+			}
+		}
+	}
+
 	@include media-breakpoint-up(sm) {
 	}
 	@include media-breakpoint-between(md, xl) {

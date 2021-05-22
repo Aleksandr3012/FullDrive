@@ -12,7 +12,7 @@ mixin sRequirements(data)
 								mixin col(i,t)
 									+e.col.col-6.col-md-3 
 										+e.imgWrap(class=`sRequirements__imgWrap--${i}`)
-											+pic(`requirments-${i}.png`,'','')
+											+pic(`requirments-${i}.png`, undefined, 0)
 										+e.txt!= t
 								+col('1',`Паспорт гражданина РФ`)
 								+col('2',`Две фотографии 3x4`)
@@ -20,7 +20,7 @@ mixin sRequirements(data)
 								+col('4',`Оплата целиком или в рассрочку`)
 						+e.whiteBlock 
 							+e.medicalCertificate
-								+pic('requirments-3.png','','')
+								+pic('requirments-3.png', undefined, 0)
 							+e.whiteBlockInner
 								h3 Нет медицинской справки?
 								h5 Мы поможем вам с ее оформлением3
@@ -30,21 +30,21 @@ mixin sRequirements(data)
 						.col-md.col-xl-12
 							+e.checkItem 
 								+e.checkImg
-									+pic('check-green.png','','')
+									+pic('check-green.png', undefined, 0)
 								+e.textWrap 
 									h4 #[span.text-primary Не нужно ждать] набора группы
 									p Начинайте учиться сразу&nbsp;же в&nbsp;день записи или оплаты
 						.col-md.col-xl-12
 							+e.checkItem 
 								+e.checkImg
-									+pic('check-green.png','','')
+									+pic('check-green.png', undefined, 0)
 								+e.textWrap 
 									h4 Экзамен в ГИБДД #[span.text-primary с&nbsp;комфортом]
 									p Полное сопровождение вплоть до&nbsp;получения водительских прав
 						.col-md.col-xl-12
 							+e.checkItem 
 								+e.checkImg
-									+pic('check-green.png','','')
+									+pic('check-green.png', undefined, 0)
 								+e.textWrap 
 									h4 #[span.text-primary Заботимся] о каждом ученике
 									p Персональный менеджер на связи 24/7

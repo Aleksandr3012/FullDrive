@@ -13,7 +13,7 @@ mixin sInstructors(data)
 								.row
 									.col-auto.col-xl-12
 										+e.check 
-											+pic('check-green.png','','')
+											+pic('check-green.png', undefined, 0)
 									.col 
 										h6!= t
 						+check(`Приятные в&nbsp;общении доброжелательные люди`)
@@ -24,7 +24,7 @@ mixin sInstructors(data)
 					+e.col.col-sm-6.col-lg-4
 						+e.item 
 							+e.imgWrap 
-								+pic(`instructor-${item.img}.png`)
+								+pic(`instructor-${item.img}.jpg`, undefined, 0)
 							+e.textWrap
 								+e.name Иван 
 									span.text-primary= item.name 

@@ -12,7 +12,7 @@ mixin sSteps(data)
 						+e.num(class=`sSteps__num--${i}`)= i
 						if img 
 							+e.imgWrap--pulse
-								+pic('certificate','','')
+								+pic('certificate.png', undefined, 0)
 						else 
 							+e.imgWrap
 								img.res-i(src=`img/svg/step-${i}.svg`, alt="" loading="lazy")
