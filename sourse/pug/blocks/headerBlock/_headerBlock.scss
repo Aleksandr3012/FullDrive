@@ -26,7 +26,7 @@
 	@include media-breakpoint-up(xl) {
 		--ballH: #{rem(700)};
 	}
-	@include media-breakpoint-up(xxl) {
+	@include media-breakpoint-up(xl) {
 		--ballH: #{rem(820)};
 	}
 
@@ -55,7 +55,7 @@
 		@include media-breakpoint-up(xl) {
 			transform: translateX(-5%) translateY(25%);
 		}
-		@include media-breakpoint-up(xxl) {
+		@include media-breakpoint-up(xl) {
 			transform: translateX(-5%) translateY(25%);
 		}
 		width: var(--ballH);
@@ -141,7 +141,7 @@
 		@include media-breakpoint-up(xl) {
 			bottom: rem(195);
 		}
-		@include media-breakpoint-up(xxl) {
+		@include media-breakpoint-up(xl) {
 			bottom: rem(230);
 		}
 		left: 0;
