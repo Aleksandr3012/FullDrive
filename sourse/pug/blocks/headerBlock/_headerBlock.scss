@@ -51,7 +51,7 @@
 		right: 0;
 		bottom: 0;
 
-		transform: translateX(-3%) translateY(25%);
+		transform: translateX(0%) translateY(25%);
 		@include media-breakpoint-up(sm) {
 			transform: translateX(-3%) translateY(25%);
 		}
@@ -63,9 +63,9 @@
 		}
 		width: var(--ballH);
 		height: var(--ballH);
-		@include media-breakpoint-up(base) {
-			transform: translateX(-20%) translateY(25%);
-		}
+		// @include media-breakpoint-up(base) {
+		// 	transform: translateX(-20%) translateY(25%);
+		// }
 
 		border-radius: 50%;
 		background-color: $green;

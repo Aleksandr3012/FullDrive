@@ -123,6 +123,10 @@
 		@include rfs(30px);
 		margin-left: rem(60);
 		font-weight: 500;
+		@include media-breakpoint-down(lg) {
+			margin-left: rem(100);
+			margin-bottom: rem(-30);
+		}
 
 		&--3 {
 			@include media-breakpoint-up(lg) {
@@ -131,6 +135,9 @@
 			}
 		}
 		&--7 {
+			@include media-breakpoint-down(lg) {
+				margin-left: rem(250);
+			}
 			@include media-breakpoint-up(lg) {
 				margin-left: -10px;
 			}
