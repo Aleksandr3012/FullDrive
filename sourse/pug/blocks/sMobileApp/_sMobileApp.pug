@@ -1,0 +1,42 @@
+mixin sMobileApp(data)
+	// start sMobileApp
+	+b.SECTION.sMobileApp.section#sMobileApp&attributes(attributes)
+		.container
+			+b.section-title
+				h2 СКАЧАЙТЕ НАШЕ 
+					span.text-primary МОБИЛЬНОЕ ПРИЛОЖЕНИЕ
+
+			.row
+				.col
+					h3 Возможности приложения
+					ul 
+						mixin li(li)
+							li 
+								div
+									+e.listTitle!= li.title
+									p!= li.text
+						+li({
+							title: `Уроки по ПДД`,
+							text: `Это не&nbsp;скучные лекции, а&nbsp;лаконичный интерактивный видео-урок со&nbsp;всей необходимой информацией`
+						})
+						+li({
+							title: `Связь с преподавателем`,
+							text: `Преподаватели, которые будут помогать в&nbsp;учебе, имеют многолетний опыт и&nbsp;смогут понятно объяснить все сложные моменты`
+						})
+						+li({
+							title: `Расписание экзаменов и&nbsp;зачетов`,
+							text: `Чтобы ни&nbsp;одна важная дата не&nbsp;забылась, внутри приложения есть специальный календарь. Он&nbsp;позволяет отмечать дни экзаменов и&nbsp;зачетов и&nbsp;выстраивать удобное расписание`
+						})
+						+li({
+							title: `Контакты инструкторов и&nbsp;администраторов`,
+							text: `Вы&nbsp;в&nbsp;любой момент можете зайти в&nbsp;приложение и&nbsp;найти необходимый телефон`
+						})
+						+li({
+							title: `Экзамен по&nbsp;ПДД`,
+							text: `Экзамен по&nbsp;ПДД в&nbsp;моб. приложении адаптирован к&nbsp;экзамену в&nbsp;ГИБДД`
+						})
+				+e.col.col-lg-5.order-lg-first
+					+e.imgWrap 
+						+pic('mobileApp.png','','') 
+	// end sMobileApp
+

@@ -1,0 +1,18 @@
+mixin sValuableSkills(data)
+	// start sValuableSkills
+	+b.SECTION.sValuableSkills.section#sValuableSkills&attributes(attributes)
+		.container
+			+b.section-title
+				h3 #[strong.text-primary Под руководством инструкторов] вы освоите ценные навыки для любого водителя
+
+			.row
+				mixin item(t)
+					+e.col.col-lg-4 
+						+e.item 
+							+e.iconWrap 
+								+pic('check-green.png','','')
+							+e.text!= t
+				+item(`Основы контраварийного и&nbsp;безопасного вождения`)
+				+item(`Подготовка к&nbsp;условиям езды в&nbsp;мегаполисе`)
+				+item(`Уверенное движение в&nbsp;потоке`)
+	// end sValuableSkills

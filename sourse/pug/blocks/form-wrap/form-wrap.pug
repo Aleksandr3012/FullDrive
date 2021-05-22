@@ -1,6 +1,6 @@
 mixin form-head()
 	form.js-form-validate( data-parsley-validate="") 
-		input(class="order", name='order', type='hidden', value=`Заявка  с сайта`) 
+		input(class="order" name='order' type='hidden', value=`Заявка  с сайта`) 
 		block
 
 mixin input(placeholder,  t='text', label, name= t)
@@ -14,7 +14,7 @@ mixin input(placeholder,  t='text', label, name= t)
 					option(value=` placeholder ${x}`)= `placeholder ${x}`
 		else if t=='file'
 			+e.INPUT.input.form-control(name=name type=t)
-			
+
 		else if t=='number'
 			+e.INPUT.input.form-control(name=name type=t placeholder=placeholder step='any')
 		else
@@ -32,20 +32,21 @@ mixin input(placeholder,  t='text', label, name= t)
 mixin select(label,pl,...items)
 	+e.input-wrap.form-group
 		label
-			+e.SPAN.title= label
-			+e.SELECT.input.form-control
+			if label
+				+e.SPAN.label= label
+			+e.SELECT.input.form-control(name="select")
 
-					option()= pl
-					each item in items
-						option()= item
+				option()= pl
+				each item in items
+					option(value=item)= item
 
 //- wrapper for form
 mixin form-wrap(inp)
 	+b.form-wrap&attributes(attributes)
 		form
 			if inp
-				input(name='example-input-field', type='hidden')
-				input(class="order", name='order', type='hidden', value=`Заявка  с сайта`) 
+				input(name='example-input-field' type='hidden')
+				input(class="order" name='order' type='hidden', value=`Заявка  с сайта`) 
 				input(class='utm_source' name='utm_source' type="hidden")
 				input(class='utm_term' name='utm_term' type="hidden")
 				input(class='utm_medium' name='utm_medium' type="hidden")
@@ -61,17 +62,17 @@ mixin in-c(typ="checkbox", text, name= typ )
 			block 
 		else
 			+e.SPAN.text.form-check-label= text
- 
-mixin add-file(n)
+
+mixin add-file(t)
 	+b.add-file
 		label
-			+e.INPUT.input(name='file', type='file')
-			+e.SPAN.btn 
-			+e.SPAN.text   Прикрепить резюме
+			+e.SPAN.text= t
+			+e.INPUT.input(name='file' type='file')
+			+e.SPAN.btn Загрузить файл
 		+e.SPAN.filename 
 
 
 mixin polite()
-	+e.polite
-		+in-c()(checked)
-			+e.SMALL.text.text-secondary Согласен на обработку и хранение моих персональных данных в соответствии с условиями
+	+b.polite
+		+e.SMALL.text Нажимая Нажимая на кнопку вы соглашаетесь 
+			a.link-modal-js(href="#modal-polite") с политикой конфиденциальности

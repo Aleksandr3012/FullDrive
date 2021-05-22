@@ -37,5 +37,9 @@ mixin top-nav()
 					+e.gray Бесплатная консультация
 					+e.number(href="tel:88129856005") 8 (812) 985-60-05
 				.col-auto.d-none.d-sm-block
-					+e.callback-btn(href="#") Заказать звонок
+					+e.callback-btn.link-modal-js(href="#modal-call") Заказать звонок
+				.col-auto.d-none.d-md-block 
+					+e.ver(href="#")
+						img(src="img/svg/eye.svg" alt="") 
+
 	// end top-nav

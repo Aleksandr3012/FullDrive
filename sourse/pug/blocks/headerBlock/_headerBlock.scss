@@ -199,7 +199,10 @@
 			@extend .btn-primary;
 			@extend .btn;
 
-			min-width: rem(350);
+			min-width: rem(300);
+			@include media-breakpoint-up(sm) {
+				min-width: rem(350);
+			}
 			padding: rem(25) rem(35);
 			@include media-breakpoint-up(lg) {
 				min-width: rem(380);

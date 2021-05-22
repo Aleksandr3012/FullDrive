@@ -1,0 +1,69 @@
+// start .sMobileApp
+.sMobileApp {
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
+	position: relative;
+	.section-title {
+		max-width: rem(430);
+	}
+
+	&__col {
+		// position: relative;
+	}
+	&__imgWrap {
+		@include media-breakpoint-up(lg) {
+			position: absolute;
+			top: rem(400);
+			right: 58%;
+		}
+		@include media-breakpoint-only(md) {
+			margin-left: -200px;
+		}
+		@include media-breakpoint-only(sm) {
+			margin-left: -140px;
+		}
+		@include media-breakpoint-down(sm) {
+			margin-left: -50px;
+		}
+	}
+
+	h3 {
+		margin-bottom: rem(45);
+	}
+	&__listTitle {
+		font-size: rem(20);
+	}
+	ul {
+		list-style: none;
+		li {
+			display: flex;
+			padding-bottom: rem(15);
+
+			&::before {
+				content: "";
+				width: rem(50px);
+				height: rem(50px);
+				margin-right: rem(20);
+				flex-shrink: 0;
+				background-image: url("../img/@1x/webp/check-green.webp");
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+		}
+
+		p {
+			color: #adadad;
+			font-size: rem(19px);
+		}
+	}
+
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sMobileApp

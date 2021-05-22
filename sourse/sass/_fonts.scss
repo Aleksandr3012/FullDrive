@@ -36,7 +36,7 @@ $file-format: woff2;
 );
 @include font-face(
 	$default-font,
-	$addr + "FuturaPT-Demi",
+	$addr + "FuturaPT/FuturaPT-Demi",
 	600,
 	$file-formats: $file-format
 );

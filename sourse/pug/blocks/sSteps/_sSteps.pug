@@ -8,7 +8,7 @@ mixin sSteps(data)
 
 			+e.row.row
 				mixin item(i,title,text,img)
-					+e.col.col-md-6(class=`sSteps__col--${i}`)
+					+e.col.col-sm-6(class=`sSteps__col--${i}`)
 						+e.num(class=`sSteps__num--${i}`)= i
 						if img 
 							+e.imgWrap--pulse

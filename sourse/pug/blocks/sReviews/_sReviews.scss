@@ -1,12 +1,54 @@
 // start .sReviews
 .sReviews {
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
 
+	.swiper-wrapper {
+		// overflow: hidden;
+	}
 
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+	.tabs {
+		&__content {
+			position: relative;
+		}
+	}
+
+	.swiper-button-disabled {
+		opacity: 0;
+	}
+
+	iframe {
+		width: 100% !important;
+		// height: auto;
+	}
+
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
 } // end.sReviews
+
+.txtBlock {
+	background-color: #fff;
+	padding: rem(70) rem(30) rem(30);
+	color: #000;
+	height: calc(100% - #{rem(15)});
+	margin-bottom: rem(15);
+	&__name {
+		@extend .mono;
+		font-size: 15px;
+		margin-bottom: rem(20);
+	}
+	p {
+		margin-bottom: rem(30);
+		font-size: 15px;
+	}
+	&__date {
+		font-size: 15px;
+	}
+}

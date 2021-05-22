@@ -2,17 +2,17 @@ mixin footer()
 	+b.FOOTER.footer
 		.container
 			.row 
-				.col-auto 
+				.col-md-auto 
 					+e.logo(href="/")
 						img(src="img/svg/logo.svg" alt="Логотип" loading='lazy')
-				.col-auto 
+				.col-md-auto 
 					+e.version(href="#")
 						img(src="img/svg/eye.svg" alt="Версия для слабовидящих" title="Версия для слабовидящих")
-				.col 
+				.col-md 
 					.text-center
 						+e.txt Создание сайта
-						+e.txt.link-modal-js(href="#polite") Политика конфиденциальности
-				.col 
+						+e.txt.link-modal-js(href="#modal-polite") Политика конфиденциальности
+				.col-md 
 					+e.rBlock 
 						+e.txt Лицензия на образовательную деятельность<br> №275-р от 25.02.2011
 

@@ -2,16 +2,16 @@ mixin sInstructors(data)
 	// start sInstructors
 	+b.SECTION.sInstructors.section#sInstructors&attributes(attributes)
 		.container
-			.row 
-				.col-7
+			+e.titleRow.row 
+				.col-lg-7
 					+b.section-title
 						h2 ПРОФЕССИОНАЛЬНЫЕ И ВЕЖЛИВЫЕ ИНСТРУКТОРЫ
 				.col 
 					.row 
 						mixin check(t)
-							.col
-								.row 
-									.col-xl-12
+							.col-sm
+								.row
+									.col-auto.col-xl-12
 										+e.check 
 											+pic('check-green.png','','')
 									.col 
@@ -19,14 +19,21 @@ mixin sInstructors(data)
 						+check(`Приятные в&nbsp;общении доброжелательные люди`)
 						+check(`Мастера вождения с&nbsp;большим опытом`)
 						+check(`Индивидуальный подход к&nbsp;каждому ученику`)
-			.row
+			+e.row.row
 				mixin instructor(item)
-					+e.col.col-md-6.col-lg-4
+					+e.col.col-sm-6.col-lg-4
 						+e.item 
 							+e.imgWrap 
-								+pic(`instructor-${item.img}.jpg`)
-							+e.name Иван 
-								span.text-primary= item.name 
+								+pic(`instructor-${item.img}.png`)
+							+e.textWrap
+								+e.name Иван 
+									span.text-primary= item.name 
+								+e.line Год рождения: 
+									strong 1975
+								+e.line Стаж вождения: 
+									strong 25 лет
+								+e.line Специализация: 
+									strong АКПП
 
 				+instructor({
 					img: '1',

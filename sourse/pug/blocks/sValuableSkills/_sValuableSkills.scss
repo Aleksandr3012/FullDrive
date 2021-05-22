@@ -1,0 +1,84 @@
+// start .sValuableSkills
+.sValuableSkills {
+	// --sPT: ;
+	// --sPB: ;
+	--sTPB: #{rem(60)};
+	padding-top: calc(var(--sPT) / 1.5);
+
+	.section-title {
+		max-width: rem(660);
+	}
+
+	h3 {
+	}
+
+	--itemMT: #{rem(30)};
+	&__col {
+		position: relative;
+		@include media-breakpoint-down(lg) {
+			max-width: 90%;
+		}
+		&:not(:last-child) {
+			&::before {
+				content: "";
+				position: absolute;
+				right: -60px;
+				width: 80px;
+				height: 30px;
+				background-image: url("../img/svg/arrow.svg");
+				background-size: cover;
+				background-repeat: no-repeat;
+				top: 90%;
+				transform: rotate(90deg);
+				@include media-breakpoint-up(lg) {
+					top: -30px;
+					transform: rotate(35deg);
+				}
+				opacity: 0.3;
+			}
+		}
+
+		&:nth-child(2) {
+			margin-top: var(--itemMT);
+		}
+		&:nth-child(3) {
+			margin-top: var(--itemMT);
+			@include media-breakpoint-up(lg) {
+				margin-top: calc(var(--itemMT) * 2);
+			}
+		}
+	}
+	&__item {
+		display: flex;
+		align-items: center;
+		padding: rem(40) rem(45) rem(40) rem(30);
+		background-color: #8ecf60;
+		border-radius: rem(10);
+	}
+	&__iconWrap {
+		max-width: rem(50);
+		margin-right: rem(15);
+		flex-shrink: 0;
+	}
+	&__text {
+		font-size: rem(20);
+		font-weight: 500;
+		line-height: 1.2;
+	}
+	.row {
+		@include media-breakpoint-up(xl) {
+			@include roww(40px);
+		}
+	}
+	&__ {
+	}
+
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sValuableSkills

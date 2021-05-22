@@ -258,8 +258,16 @@ const JSCCommon = {
 		let now = new Date();
 		let currentYear = document.querySelector(el);
 		if (currentYear) currentYear.innerText = now.getFullYear();
-	}
+	},
 
+	CustomInputFile: function CustomInputFile() {
+		var file = $(".add-file input[type=file]");
+		file.change(function () {
+			var filename = $(this).val().replace(/.*\\/, "");
+			var name = $(".add-file__filename  ");
+			name.text(filename);
+		});
+	}
 };
 const $ = jQuery;
 
@@ -271,8 +279,8 @@ function eventHandler() {
 	JSCCommon.inputMask();
 	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
-	JSCCommon.animateScroll(); // JSCCommon.CustomInputFile(); 
-
+	JSCCommon.animateScroll();
+	JSCCommon.CustomInputFile();
 	var x = window.location.host;
 	let screenName;
 	screenName = document.body.dataset.bg;
@@ -317,10 +325,7 @@ function eventHandler() {
 		pagination: {
 			el: ' .swiper-pagination',
 			type: 'bullets',
-			clickable: true // renderBullet: function (index, className) {
-			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-			// }
-
+			clickable: true
 		}
 	};
 	const swiper4 = new Swiper('.sBanners__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
@@ -331,7 +336,45 @@ function eventHandler() {
 		slideToClickedSlide: true,
 		freeModeMomentum: true
 	})); // modal window
-	//accardion
+
+	let brifSlider = new Swiper('.sCarPark__slider--js', {
+		freeModeMomentum: true,
+		watchOverflow: true,
+		slidesPerView: 1,
+		spaceBetween: 40,
+		breakpoints: {
+			768: {
+				spaceBetween: 100
+			}
+		},
+		pagination: {
+			el: '.sCarPark .swiper-pagination',
+			type: 'bullets',
+			clickable: true
+		},
+		navigation: {
+			nextEl: '.sCarPark .swiper-button-next',
+			prevEl: '.sCarPark .swiper-button-prev'
+		}
+	});
+	const sReviewsSlider = new Swiper('.sReviews .tabs__content .sReviews__slider--js', {
+		slidesPerView: 1,
+		loop: false,
+		// effect: fade,
+		spaceBetween: 0,
+		observer: true,
+		autoHeight: true,
+		observeParents: true,
+		navigation: {
+			nextEl: '.sReviews .tabs__content .swiper-button-next',
+			prevEl: '.sReviews .tabs__content .swiper-button-prev'
+		},
+		pagination: {
+			el: '.sReviews .tabs__content .swiper-pagination',
+			type: 'bullets',
+			clickable: true
+		}
+	}); //accardion
 
 	function makeDDGroup(qSelecorts) {
 		for (let parentSelect of qSelecorts) {

@@ -2,8 +2,15 @@ mixin sCertificate(data)
 	// start sCertificate
 	+b.SECTION.sCertificate.section#sCertificate&attributes(attributes)
 		.container
-			+b.section-title
-				h2 sCertificate
-				
 			.row
+				.col-lg-4
+					+b.section-title
+						h2 ПОДАРОЧНЫЙ СЕРТИФИКАТ
+					h4 Подарочный сертификат на&nbsp;курсы вождения в&nbsp;автошколе &laquo;Фулл Драйв&raquo;- это оригинальный и&nbsp;действительно полезный подарок близким или друзьям!
+					strong Выбирай любой удобный номинал Сертификата с&nbsp;шагом в&nbsp;5000&nbsp;р.&nbsp;и&nbsp;жми кнопку &laquo;Заказать&raquo;
+					p После оплаты , выбранный сертификат придёт вам на&nbsp;указанную электронную почту, оформленный в&nbsp;подарочном стиле.
+					+e.btn.link-modal-js(href="#modal-certificate") КУПИТЬ ПОДАРОЧНЫЙ СЕРТИФИКАТ
+				.col 
+					+e.imgWrap 
+						+pic('certificate-img.png','','')
 	// end sCertificate

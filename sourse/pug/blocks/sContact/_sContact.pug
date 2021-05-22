@@ -6,14 +6,15 @@ mixin sContact()
 				h2 КОНТАКТЫ
 
 			.row
-				.col 
+				.col-md-6.col-lg 
 					+e.title Телефон
 					+e.subtitle(href="tel:8(812)9856005") 8 (812) 985-60-05
-					+e.link.link-moldal-js(href="#modal-call") Обратный звонок
-				.col 
+					div
+						+e.link.link-modal-js(href="#modal-call") Обратный звонок
+				.col-md-6.col-lg 
 					+e.title Режим работы
 					+e.subtitle пн-вс 09.00-20.00
-				.col 
+				.col-md-6.col-lg 
 					+e.title Электронная почта
 					+e.subtitle(href="mailto:fulldrives@yandex.ru") fulldrives@yandex.ru
 	// end sContact

@@ -2,8 +2,18 @@ mixin sMotorcycles(data)
 	// start sMotorcycles
 	+b.SECTION.sMotorcycles.section#sMotorcycles&attributes(attributes)
 		.container
+			+e.txtBg МОТОЦИКЛЫ
 			+b.section-title
-				h2 sMotorcycles
-				
+				h2 МОТОЦИКЛЫ
+
 			.row
+				mixin item(i,t)
+					.col-md-6.col-lg-4
+						+e.item 
+							+e.imgWrap
+								+pic(`motorcycles-${i}.png`,'','')
+							+e.text!= t
+				+item('1',`Yamaha YBR 125`)
+				+item('2',`Suzuki GW250`)
+				+item('3',`KTM Duke 200`)
 	// end sMotorcycles

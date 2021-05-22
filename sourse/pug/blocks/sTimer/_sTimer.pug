@@ -2,8 +2,17 @@ mixin sTimer(data)
 	// start sTimer
 	+b.SECTION.sTimer.section#sTimer&attributes(attributes)
 		.container
-			+b.section-title
-				h2 sTimer
-				
 			.row
+				.col-lg-7
+					+e.block 
+						h3 
+							span.text-primary Хотите сдать на права уже в апреле? 
+							|Торопись, мест осталось мало!
+						h4 Набор на обучение будет закончен через:
+						.time__block
+							.idvd_timer.autostart(data-redirect_url='' data-duration_hours='24')
+						+e.btn.link-modal-js(href="#modal-signUp") ЗАПИСАТЬСЯ В ШКОЛУ ПРЯМО СЕЙЧАС
+				+e.col.col.d-none.d-lg-flex 
+					+e.imgWrap 
+						+pic('keys.png','','')
 	// end sTimer

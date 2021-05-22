@@ -1,9 +1,38 @@
 mixin sCarPark(data)
 	// start sCarPark
 	+b.SECTION.sCarPark.section#sCarPark&attributes(attributes)
+		+e.bgText АВТОПАРК
 		.container
-			+b.section-title
-				h2 sCarPark
-				
-			.row
+			+e.row.row
+				.col-lg-6
+					+b.section-title
+						h2 АВТОПАРК ИЗ&nbsp;#[span.text-primary НАДЕЖНЫХ] АВТОМОБИЛЕЙ
+						h4 Вы&nbsp;проведете время за&nbsp;рулем учебных автомобилей не&nbsp;только с&nbsp;пользой, но&nbsp;и&nbsp;с&nbsp;комфортом
+				.col-lg
+					.row 
+						mixin col(t)
+							+e.col.col-md-6
+								+e.iconWrap 
+									+pic('check-green.png','','')
+								+e.txt!= t
+						+col(`Весь автопарк находится в&nbsp;отличном внешнем и&nbsp;техническом состоянии`)
+						+col(`Автоматическая и&nbsp;механическая коробка передач на&nbsp;выбор`)
+						+col(`Без дополнительных и&nbsp;скрытых платежей за&nbsp;топливо`)
+						+col(`Экзамен в&nbsp;ГИБДД вы&nbsp;сдадите на&nbsp;том&nbsp;же авто, на&nbsp;котором обучались`)
+			+e.slider--js
+				.swiper-wrapper
+					mixin slide(img)
+						.swiper-slide
+							+e.imgWrap 
+								+pic(`car-${img}.jpg`,'','')
+					+slide(1)
+					+slide(2)
+					+slide(3)
+					+slide(4)
+					+slide(5)
+					+slide(6)
+					+slide(7)
+				+arrow
+				.swiper-pagination
+
 	// end sCarPark

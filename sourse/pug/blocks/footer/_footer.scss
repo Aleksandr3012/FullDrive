@@ -2,6 +2,9 @@
 	margin-top: auto;
 	padding-top: var(--sPT);
 	padding-bottom: rem(30);
+	@include media-breakpoint-down(md) {
+		text-align: center;
+	}
 
 	&__txt {
 		color: #999 !important;
@@ -21,6 +24,10 @@
 		img {
 			width: 100px;
 		}
+		@include media-breakpoint-down(md) {
+			margin-bottom: rem(20);
+			margin-top: rem(30);
+		}
 	}
 	.row {
 		@include media-breakpoint-up(xl) {
@@ -29,7 +36,12 @@
 	}
 
 	&__rBlock {
-		text-align: right;
+		@include media-breakpoint-up(md) {
+			text-align: right;
+		}
+		@include media-breakpoint-down(md) {
+			padding-top: rem(20);
+		}
 	}
 
 	@include media-breakpoint-up(xs) {

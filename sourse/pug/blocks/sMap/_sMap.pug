@@ -2,8 +2,48 @@ mixin sMap(data)
 	// start sMap
 	+b.SECTION.sMap.section#sMap&attributes(attributes)
 		.container
+			+e.bgTxt ПЛОЩАДКИ
 			+b.section-title
-				h2 sMap
-				
+				+e.title 7 ПЛОЩАДОК
+				h2 В РАЗНЫХ РАЙОНАХ ГОРОДА
+
+
 			.row
+				+e.col.col.order-xl-last
+					+e.map 
+						// <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8c13deaaf31ac83dde61d920c8667d3330256fd0323b6815e81ae439c6313c3f&amp;width=100%;height=100%;lang=ru_RU&amp;scroll=true"></script>
+						iframe(src='https://yandex.ru/map-widget/v1/-/CCU44VvrhA' width='100%' height='100%' frameborder='0' allowfullscreen='true' style='position:relative;border:none;')
+				.col-xl-4.order-xl-first 
+					.row
+						.col-sm-6.col-xl-12
+							+e.row.row 
+								.col-auto
+									+e.dot.bg-primary
+								.col
+									h3 Автодромы
+									h4 #[.text-primary Пулковское шоссе, д. 25] м. Московская
+									h4 #[.text-primary Первый мичуринский проспект, д. 10] м. Лесная
+									h4 #[.text-primary Рапищева, д. 14] м. Комендантский проспект
+									h4 #[.text-primary Коломяжский проспект, д. 10А] м. Черная речка<br>м. Новая Деревня
+
+						.col-sm-6.col-xl-12
+							+e.row.row 
+								.col-auto 
+									+e.dot.bg-dark
+								.col
+									h3 Мотодромы
+									h4 
+										.text-primary Летняя мотошкола №1<br>улица Полевая Сабировская, д. 54А
+										.text-dark ТК&nbsp;&laquo;Интерио&raquo;, большая площадка слева от&nbsp;комплекса
+										| м. Пионерская<br> м. Комендантский проспект
+									h4 
+										.text-primary Зимняя мотошкола №1<br>Гаражный проезд 
+										|м. Обухово<br> м. Купчино
+									h4 
+										.text-primary Летняя мотошкола №1 • Юго-Запад Таллинское шоссе, д. 40А
+										.text-dark Заезд на&nbsp;парковку ТК&nbsp;&laquo;Далпорт Сити&raquo;, обойти слева пока не&nbsp;увидите площадку с&nbsp;мотоциклами
+										| м. Проспект Ветеранов<br>м. Ленинский проспект
+
+
+
 	// end sMap

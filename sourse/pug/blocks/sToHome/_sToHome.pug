@@ -2,8 +2,21 @@ mixin sToHome(data)
 	// start sToHome
 	+b.SECTION.sToHome.section#sToHome&attributes(attributes)
 		.container
-			+b.section-title
-				h2 sToHome
-				
-			.row
+			+e.row.row
+				.col-md-6.order-md-last
+					h3 Удобно начинать и&nbsp;заканчивать занятия по&nbsp;вождению #[span.text-primary от&nbsp;места работы] или подъезда вашего дома?
+					p Закажите услугу #[strong подача авто] к&nbsp;любому выбранному курсу и&nbsp;проходите обучение с&nbsp;еще большим комфортом
+					+e.btnRow.row.align-items-center
+						.col-auto
+							+e.btn.link-modal-js(href="#modal-signUp") ОСТАВИТЬ ЗАЯВКУ
+						.col
+							+e.price Стоимость: 
+								strong.text-primary 5000 ₽
+				.col-md-6
+					+e.imgWrap 
+						img.start(src="img/@2x/start.png" alt="" loading="lazy")
+						img.road(src="img/@2x/road.png" alt="" loading="lazy")
+						img.finish(src="img/@2x/finish.png" alt="" loading="lazy")
+						img.car(src="img/@2x/car-sm.png" alt="" loading="lazy")
+						img.check(src="img/svg/check.svg" alt="" loading="lazy")
 	// end sToHome

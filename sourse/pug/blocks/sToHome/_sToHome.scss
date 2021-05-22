@@ -1,12 +1,133 @@
 // start .sToHome
 .sToHome {
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
 
+	&__btn {
+		@extend .btn;
+		@extend .btn-primary;
+	}
+	&__price {
+	}
+	&__imgWrap {
+		position: relative;
+		max-width: rem(340);
+		margin-left: auto;
+		@include media-breakpoint-down(md) {
+			margin-top: rem(100);
+			margin-right: auto;
+		}
+		.start {
+			position: absolute;
+			top: -80px;
+			left: -80px;
+		}
+		.road {
+			max-width: rem(340);
+		}
+		.finish {
+			max-width: rem(100);
+			position: absolute;
+			bottom: 10px;
+			left: 30px;
+		}
+		.car {
+			position: absolute;
+			z-index: 2;
+			top: -10px;
+			left: -50px;
+			animation: car 10s linear infinite;
+		}
+		.check {
+			position: absolute;
+			max-width: rem(30);
+			bottom: 30px;
+			left: 150px;
+			animation: check 10s linear infinite;
+		}
 
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+		img {
+			@extend .res-i;
+		}
+	}
+	&__btnRow {
+		@include roww(10px);
+	}
+	&__row {
+		@include media-breakpoint-up(xl) {
+			@include roww(110px);
+		}
+	}
+	&__ {
+	}
+
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
 } // end.sToHome
+
+@keyframes car {
+	0% {
+		transform: translateX(0px) translateY(0px);
+	}
+	10% {
+		transform: translateX(150px) translateY(-10px);
+	}
+	20% {
+		transform: translateX(100px) translateY(40px);
+	}
+	30% {
+		transform: translateX(100px) translateY(60px);
+	}
+	40% {
+		transform: translateX(240px) translateY(60px);
+	}
+	50% {
+		transform: translateX(310px) translateY(65px);
+	}
+	60% {
+		transform: translateX(20px) translateY(180px);
+	}
+	100% {
+		transform: translateX(20px) translateY(180px);
+	}
+}
+
+@keyframes check {
+	0% {
+		opacity: 0;
+	}
+	10% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 0;
+	}
+	30% {
+		opacity: 0;
+	}
+	40% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+	60% {
+		opacity: 0;
+	}
+	70% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}

@@ -2,8 +2,17 @@ mixin sOnline(data)
 	// start sOnline
 	+b.SECTION.sOnline.section#sOnline&attributes(attributes)
 		.container
-			+b.section-title
-				h2 sOnline
-				
+
 			.row
+				.col-lg-6
+					+b.section-title
+						h2 #[span.text-primary ОНЛАЙН КУРСЫ] - ЭТО УДОБНО!
+					p Мы&nbsp;ценим ваше время, потому предлагаем осваивать теорию онлайн. Преподаватель будет вас поддерживать и&nbsp;курировать на&nbsp;каждом этапе обучения. Обратная связь в&nbsp;таком формате намного эффективней работы в&nbsp;группе в&nbsp;классах.
+					p Кроме того, если вы&nbsp;хотите остановиться на&nbsp;какой-то теме подробнее, можно пересмотреть урок столько раз, сколько захотите. Вы&nbsp;осваиваете информацию в&nbsp;комфортном для вас темпе, без оглядки на&nbsp;успеваемость группы. Персональный план занятий поможет лучше и&nbsp;качественнее изучить материал.
+					+e.btn.link-modal-js(href="#modal-signUp") НАЧАТЬ ОБУЧЕНИЕ ПРЯМО СЕЙЧАС
+				.col-lg.order-lg-first
+					+e.imgWrap 
+						img.res-i.lg(src="img/svg/online.svg" alt="" loading="lazy")
+						img.res-i.sm(src="img/svg/online-sm.svg" alt="" loading="lazy")
+
 	// end sOnline

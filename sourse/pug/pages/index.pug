@@ -17,7 +17,9 @@ include ../blocks/sCertificate/_sCertificate.pug
 include ../blocks/sToHome/_sToHome.pug
 include ../blocks/sMotorcycles/_sMotorcycles.pug
 include ../blocks/sMap/_sMap.pug
-include ../blocks/sAttachment/_sAttachment.pug
+include ../blocks/sMobileApp/_sMobileApp.pug
+include ../blocks/sValuableSkills/_sValuableSkills.pug
+include ../blocks/sReviews/_sReviews.pug
 
 block variables
 	- let  mainPage= null 
@@ -37,13 +39,15 @@ block pagecontent
 	+sSteps()
 	+sRequirements()
 	+sInstructors()
+	+sValuableSkills()
 	+sOnline()
 	+sCarPark()
 	+sCertificate()
 	+sToHome()
 	+sMotorcycles()
 	+sMap()
-	+sAttachment()
+	+sMobileApp()
+	+sReviews()
 	+sTimer()
 	+sQuestions()
 	+sContact()
