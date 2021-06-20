@@ -41,7 +41,7 @@
 	&__btn {
 		display: block;
 		width: 100%;
-		margin-bottom: rem(20);
+		margin-bottom: rem(0) !important;
 	}
 
 	&__input {
@@ -84,6 +84,7 @@
 }
 
 .polite {
+	text-align: center;
 	a {
 		color: #000;
 	}

@@ -14,8 +14,11 @@
 		}
 	}
 
-	.swiper-button-disabled {
-		opacity: 0;
+	.swiper-button {
+		&-disabled {
+			opacity: 0;
+			pointer-events: none;
+		}
 	}
 
 	iframe {

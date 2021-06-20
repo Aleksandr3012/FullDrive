@@ -15,7 +15,10 @@
 	--sTPB: #{rem(30 / 2)};
 
 	--swiperArrowSize: #{rem(50)};
-	--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) * 1.5);
+	--swiperArrowPosition: calc(-0.6 * var(--swiperArrowSize));
+	@media (min-width: 1350px) {
+		--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) * 1.5);
+	}
 	--swiperBorderColorDef: var(--bs-primary);
 	--swiperColorDef: var(--bs-primary);
 	--swiperBgDef: #ffffff;

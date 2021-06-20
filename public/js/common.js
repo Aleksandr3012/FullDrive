@@ -269,7 +269,7 @@ const JSCCommon = {
 		});
 	}
 };
-const $ = jQuery;
+let $ = jQuery;
 
 function eventHandler() {
 	JSCCommon.ifie();
@@ -347,11 +347,6 @@ function eventHandler() {
 				spaceBetween: 100
 			}
 		},
-		pagination: {
-			el: '.sCarPark .swiper-pagination',
-			type: 'bullets',
-			clickable: true
-		},
 		navigation: {
 			nextEl: '.sCarPark .swiper-button-next',
 			prevEl: '.sCarPark .swiper-button-prev'
@@ -368,11 +363,25 @@ function eventHandler() {
 		navigation: {
 			nextEl: '.sReviews .tabs__content .swiper-button-next',
 			prevEl: '.sReviews .tabs__content .swiper-button-prev'
+		}
+	});
+	const sMotorcyclesSlider = new Swiper('.sMotorcycles__slider--js', {
+		loop: false,
+		// effect: fade,
+		spaceBetween: 30,
+		watchOverflow: true,
+		slidesPerView: 1,
+		breakpoints: {
+			576: {
+				slidesPerView: 2
+			},
+			992: {
+				slidesPerView: 'auto'
+			}
 		},
-		pagination: {
-			el: '.sReviews .tabs__content .swiper-pagination',
-			type: 'bullets',
-			clickable: true
+		navigation: {
+			nextEl: '.sMotorcycles .swiper-button-next',
+			prevEl: '.sMotorcycles .swiper-button-prev'
 		}
 	}); //accardion
 

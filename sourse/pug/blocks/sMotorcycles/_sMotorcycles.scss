@@ -23,7 +23,7 @@
 		display: flex;
 		flex-direction: column;
 		padding-top: rem(5);
-		margin-bottom: rem(20);
+		// margin-bottom: rem(20);
 	}
 	&__imgWrap {
 		@include block(360, 289);
@@ -40,7 +40,50 @@
 		font-weight: 700;
 		padding: rem(40) rem(30);
 	}
-	&__ {
+	&__col {
+		display: flex;
+		align-items: center;
+		padding-bottom: rem(30);
+	}
+	&__iconWrap {
+		max-width: rem(50);
+		flex-shrink: 0;
+		margin-right: rem(5);
+	}
+	&__row {
+		padding-bottom: rem(20);
+	}
+
+	&__slider {
+		position: relative;
+	}
+
+	.swiper-slide {
+		@include media-breakpoint-up(lg) {
+			width: 31.5%;
+		}
+
+		&:last-child {
+			margin-right: 0 !important;
+		}
+	}
+
+	.swiper-button {
+		&-prev {
+			@include media-breakpoint-down(lg) {
+				left: 10px;
+			}
+		}
+		&-next {
+			@include media-breakpoint-down(sm) {
+				right: 10px;
+			}
+		}
+
+		&-disabled {
+			opacity: 0;
+			pointer-events: none;
+		}
 	}
 
 	@include media-breakpoint-up(sm) {

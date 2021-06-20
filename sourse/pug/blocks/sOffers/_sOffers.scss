@@ -56,6 +56,10 @@
 		@include media-breakpoint-up(md) {
 			margin-left: rem(5);
 		}
+
+		img {
+			@extend .res-i;
+		}
 	}
 	&__title {
 		@include rfs(28px);

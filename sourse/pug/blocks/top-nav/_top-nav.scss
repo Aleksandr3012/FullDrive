@@ -62,9 +62,19 @@
 		@extend .btn-primary;
 		@extend .btn;
 	}
+
+	a.bvi-link-widget,
+	a.bvi-link-shortcode {
+		background-color: transparent !important;
+	}
 	//
 	&__ {
 	}
 	&__ {
 	}
+}
+
+html body .top-nav a.bvi-link-widget .bvi-svg-eye,
+html body .top-nav a.bvi-link-shortcode .bvi-svg-eye {
+	font-size: 3em;
 }

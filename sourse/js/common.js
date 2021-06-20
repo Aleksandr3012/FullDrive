@@ -261,7 +261,7 @@ const JSCCommon = {
 		});
 	},
 };
-const $ = jQuery;
+// let $ = jQuery;
 
 function eventHandler() {
 	JSCCommon.ifie();
@@ -349,11 +349,6 @@ function eventHandler() {
 			},
 		},
 
-		pagination: {
-			el: '.sCarPark .swiper-pagination',
-			type: 'bullets',
-			clickable: true,
-		},
 
 		navigation: {
 			nextEl: '.sCarPark .swiper-button-next',
@@ -365,19 +360,61 @@ function eventHandler() {
 		slidesPerView: 1,
 		loop: false,
 		// effect: fade,
-		spaceBetween: 0,
+		spaceBetween: 30,
 		observer: true,
 		autoHeight: true,
 		observeParents: true,
+		breakpoints: {
+			992: {
+				slidesPerView: 2,
+			},
+		},
 		navigation: {
 			nextEl: '.sReviews .tabs__content .swiper-button-next',
 			prevEl: '.sReviews .tabs__content .swiper-button-prev',
 		},
-		pagination: {
-			el: '.sReviews .tabs__content .swiper-pagination',
-			type: 'bullets',
-			clickable: true,
-		}
+	});
+
+	const sReviewsVideoSlider = new Swiper('.sReviews .tabs__content .sReviews__sliderVideo--js', {
+		slidesPerView: 1,
+		loop: false,
+		spaceBetween: 30,
+		observer: true,
+		autoHeight: true,
+		observeParents: true,
+		breakpoints: {
+			992: {
+				slidesPerView: 2,
+			},
+			1200: {
+				slidesPerView: 3,
+			},
+		},
+		navigation: {
+			nextEl: '.sReviews .tabs__content--video .swiper-button-next',
+			prevEl: '.sReviews .tabs__content--video .swiper-button-prev',
+		},
+	});
+
+	const sMotorcyclesSlider = new Swiper('.sMotorcycles__slider--js', {
+		loop: false,
+		// effect: fade,
+		spaceBetween: 30,
+		watchOverflow: true,
+		slidesPerView: 1,
+
+		breakpoints: {
+			576: {
+				slidesPerView: 2,
+			},
+			992: {
+				slidesPerView: 'auto',
+			},
+		},
+		navigation: {
+			nextEl: '.sMotorcycles .swiper-button-next',
+			prevEl: '.sMotorcycles .swiper-button-prev',
+		},
 	});
 
 	//accardion

@@ -1,19 +1,34 @@
 mixin sMotorcycles(data)
 	// start sMotorcycles
 	+b.SECTION.sMotorcycles.section#sMotorcycles&attributes(attributes)
+		+e.txtBg МОТОЦИКЛЫ
 		.container
-			+e.txtBg МОТОЦИКЛЫ
-			+b.section-title
-				h2 МОТОЦИКЛЫ
-
-			.row
-				mixin item(i,t)
-					.col-md-6.col-lg-4
-						+e.item 
-							+e.imgWrap
-								+pic(`motorcycles-${i}.png`,'','')
-							+e.text!= t
-				+item('1',`Yamaha YBR 125`)
-				+item('2',`Suzuki GW250`)
-				+item('3',`KTM Duke 200`)
+			+e.row.row
+				.col-lg-6
+					+b.section-title
+						h2 МОТОПАРК ИЗ&nbsp;#[span.text-primary НАДЕЖНЫХ] МОТОЦИКЛОВ
+						h4 Вы&nbsp;проведете время за&nbsp;рулем учебных мотоциклов не&nbsp;только с&nbsp;пользой, но&nbsp;и&nbsp;с&nbsp;комфортом
+				.col-lg
+					.row 
+						mixin col(t)
+							+e.col.col-md-6
+								+e.iconWrap 
+									+pic('check-green.png','','')
+								+e.txt!= t
+						+col(`Весь мотопарк находится в&nbsp;отличном внешнем и&nbsp;техническом состоянии`)
+						+col(`Автоматическая и&nbsp;механическая коробка передач на&nbsp;выбор`)
+						+col(`Без дополнительных и&nbsp;скрытых платежей за&nbsp;топливо`)
+						+col(`Экзамен в&nbsp;ГИБДД вы&nbsp;сдадите на&nbsp;том&nbsp;же авто, на&nbsp;котором обучались`)
+			+e.slider--js
+				.swiper-wrapper
+					mixin item(i,t)
+						.swiper-slide
+							+e.item 
+								+e.imgWrap
+									+pic(`motorcycles-${i}.png`,'','')
+								+e.text!= t
+					+item('1',`Yamaha YBR 125`)
+					+item('2',`Suzuki GW250`)
+					+item('3',`KTM Duke 200`)
+				+arrow
 	// end sMotorcycles

@@ -10,11 +10,14 @@
 		@include media-breakpoint-down(lg) {
 			margin-bottom: rem(30);
 		}
+		margin-top: rem(10);
+		margin-bottom: rem(10);
 	}
 	&__imgWrap {
 		max-width: rem(600);
 		margin-left: auto;
 	}
+
 	&__ {
 	}
 	&__ {
