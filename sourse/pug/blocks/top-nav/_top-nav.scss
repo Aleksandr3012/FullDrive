@@ -11,6 +11,13 @@
 		padding: rem(30) 0;
 	}
 
+	.container {
+		@include media-breakpoint-down(sm) {
+			max-width: 320px;
+		}
+	}
+
+
 	&__logo {
 		display: block;
 		width: 110px;
