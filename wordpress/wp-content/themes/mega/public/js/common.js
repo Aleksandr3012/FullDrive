@@ -42,13 +42,7 @@ const JSCCommon = {
 					// ZOOM: "Zoom"
 
 				}
-			} // beforeLoad: function () {
-			// 	root.style.setProperty('--spacing-end', scrollWidth + 'px');
-			// },
-			// afterClose: function () {
-			// 	root.style.setProperty('--spacing-end', null);
-			// },
-
+			}
 		});
 		$(".modal-close-js").click(function () {
 			$.fancybox.close();
@@ -69,7 +63,9 @@ const JSCCommon = {
 						}
 					}
 
-					setValue(data.title, '.ttu');
+					setValue(data.typ, '[name="typ"]');
+					setValue(data.subtype, '[name="subtype"]');
+					setValue(data.price, '[name="price"]');
 					setValue(data.text, '.after-headline');
 					setValue(data.btn, '.btn');
 					setValue(data.order, '.order');
@@ -183,51 +179,6 @@ const JSCCommon = {
 		}
 	},
 
-	sendForm() {
-		var gets = function () {
-			var a = window.location.search;
-			var b = new Object();
-			var c;
-			a = a.substring(1).split("&");
-
-			for (var i = 0; i < a.length; i++) {
-				c = a[i].split("=");
-				b[c[0]] = c[1];
-			}
-
-			return b;
-		}(); // form
-
-
-		$(document).on('submit', "form", function (e) {
-			e.preventDefault();
-			const th = $(this);
-			var data = th.serialize();
-			th.find('.utm_source').val(decodeURIComponent(gets['utm_source'] || ''));
-			th.find('.utm_term').val(decodeURIComponent(gets['utm_term'] || ''));
-			th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium'] || ''));
-			th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign'] || ''));
-			$.ajax({
-				url: 'action.php',
-				type: 'POST',
-				data: data
-			}).done(function (data) {
-				$.fancybox.close();
-				$.fancybox.open({
-					src: '#modal-thanks',
-					type: 'inline'
-				}); // window.location.replace("/thanks.html");
-
-				setTimeout(function () {
-					// Done Functions
-					th.trigger("reset"); // $.magnificPopup.close();
-					// ym(53383120, 'reachGoal', 'zakaz');
-					// yaCounter55828534.reachGoal('zakaz');
-				}, 4000);
-			}).fail(function () {});
-		});
-	},
-
 	heightwindow() {
 		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 		let vh = window.innerHeight * 0.01; // Then we set the value in the --vh custom property to the root of the document
@@ -264,7 +215,7 @@ const JSCCommon = {
 		var file = $(".add-file input[type=file]");
 		file.change(function () {
 			var filename = $(this).val().replace(/.*\\/, "");
-			var name = $(".add-file__filename  ");
+			var name = $(this).parents('.add-file').find(".add-file__filename");
 			name.text(filename);
 		});
 	}
@@ -276,7 +227,6 @@ function eventHandler() {
 	JSCCommon.tabscostume('.tabs--js');
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
-	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
 	JSCCommon.animateScroll();
 	JSCCommon.CustomInputFile();

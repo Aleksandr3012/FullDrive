@@ -263,8 +263,13 @@ input::-webkit-inner-spin-button {
 	background-color: $success;
 }
 
+
 .add-file {
 	// padding-bottom: 25px;
+	br {
+		display: none;
+	}
+
 	label {
 		width: 100%;
 		display: block;

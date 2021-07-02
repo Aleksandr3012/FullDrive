@@ -16,7 +16,7 @@
 		padding-bottom: var(--sPB);
 	}
 
-	--ballH: #{320px};
+	--ballH: #{380px};
 	@include media-breakpoint-up(sm) {
 		--ballH: #{rem(620)};
 	}
@@ -31,6 +31,13 @@
 	}
 	@include media-breakpoint-up(xxl) {
 		--ballH: #{rem(820)};
+	}
+
+	.container {
+		@include media-breakpoint-down(sm) {
+			padding-right: var(--bs-gutter-x,1.5rem);
+			padding-left: var(--bs-gutter-x,1.5rem);
+		}
 	}
 
 	&__row {
@@ -50,6 +57,10 @@
 		position: absolute;
 		right: 0;
 		bottom: 0;
+		@media (max-width:400px) {
+			right: -25px;
+			
+		}
 
 		transform: translateX(0%) translateY(25%);
 		@include media-breakpoint-up(sm) {

@@ -170,7 +170,7 @@ add_shortcode('sPrice', 'sPrice_func');
 																		<div class="priceItem__price"><?php echo the_sub_field('экспресс_цена'); ?>
 																		</div>
 																	</td>
-																	<td> <a class="priceItem__btn link-modal-js" href="#modal-signUp">ЗАПИСАТЬСЯ</a>
+																	<td> <a href="#modal-signUp" class="priceItem__btn link-modal-js" data-typ="АВТОШКОЛА ЭКСПРЕСС" data-subtype="<?php echo the_sub_field('экспресс_тип'); ?>" data-price="<?php echo the_sub_field('экспресс_цена'); ?>">ЗАПИСАТЬСЯ</a>
 																	</td>
 																</tr>
 															</tbody>
@@ -207,7 +207,7 @@ add_shortcode('sPrice', 'sPrice_func');
 																<div class="priceItem__price"><?php echo the_sub_field('стандарт_цена'); ?>
 																</div>
 															</td>
-															<td> <a class="priceItem__btn link-modal-js" href="#modal-signUp">ЗАПИСАТЬСЯ</a>
+															<td> <a class="priceItem__btn link-modal-js" data-typ="АВТОШКОЛА СТАНДАРТ" data-subtype="<?php echo the_sub_field('стандарт_тип'); ?>" data-price="<?php echo the_sub_field('стандарт_цена'); ?>" href="#modal-signUp">ЗАПИСАТЬСЯ</a>
 															</td>
 														</tr>
 													</tbody>
@@ -247,7 +247,7 @@ add_shortcode('sPrice', 'sPrice_func');
 																<div class="priceItem__price"><?php echo the_sub_field('мотошкола_цена'); ?>
 																</div>
 															</td>
-															<td> <a class="priceItem__btn link-modal-js" href="#modal-signUp">ЗАПИСАТЬСЯ</a>
+															<td> <a class="priceItem__btn link-modal-js" data-typ="МОТОШКОЛА СТАНДАРТ" data-subtype="<?php echo the_sub_field('мотошкола_тип'); ?>" data-price="<?php echo the_sub_field('мотошкола_цена'); ?>" href="#modal-signUp">ЗАПИСАТЬСЯ</a>
 															</td>
 														</tr>
 													</tbody>
